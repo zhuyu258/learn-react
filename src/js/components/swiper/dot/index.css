@@ -1,0 +1,16 @@
+.dot{
+  position: absolute;
+  text-align: center;
+  bottom: 30px;
+  width: 100%;
+}
+.dot span{
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 4px;
+}
+.dot .active{
+  background: red;
+}

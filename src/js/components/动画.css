@@ -1,0 +1,50 @@
+/* 进入的初始位置  */
+
+.animteList-enter{
+  margin-left: -200px;
+  transition-duration:500ms;
+}
+/* 进入之后终点位置 */
+
+.animteList-enter-active{
+  margin-left: 0px;
+}
+.fade-enter{
+  opacity: 0;
+}
+.fade-enter-active{
+  opacity: 1;
+}
+.fade-enter-done{
+  opacity: 1;
+}
+
+.box{
+  display: none;
+  transform-origin:0 bottom;
+
+}
+&.test-enter{
+  transform:rotateZ(90deg);
+  &.test-enter-active{
+    transition:transform .3s;
+    transform: rotateZ(0deg);
+  }
+}
+.test-exit{
+  transform:rotateZ(0deg);
+
+
+}
+.test-exit-active{
+  transition:transform .3s;
+  transform: rotateZ(90deg);
+}
+.color-box{
+  width:200px;
+  height:200px;
+  background: #ff0;
+  color: #000;
+  line-height: 200px;
+  text-align: center;
+}

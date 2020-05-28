@@ -1,0 +1,23 @@
+.arrow{
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  right: 0px;
+  transform: translate(0,-50%);
+}
+.arrow span{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+}
+.arrow .left{
+  left: 0px;
+}
+.arrow .right{
+  right: 0px;
+}

@@ -1,0 +1,9 @@
+.wrap{
+    
+}
+.wrap li{
+    list-style: none;
+    text-align: left;
+    height: 1.5;
+    line-height: 1.5;
+}

@@ -1,0 +1,11 @@
+.header-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-wrap .logo{
+  font-size: 16px;
+}
+.header-wrap .user{
+  font-size: 12px;
+}
