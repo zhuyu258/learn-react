@@ -59,7 +59,7 @@ class App extends Component {
           <Route exact component={RouterList} path="/RouterList/:id"></Route>
           {/*路由重定向,必须和switch 组合使用*/}
           <Redirect from="/*" to="/erro"></Redirect>
-         
+
         </Switch>
         <MsgProp></MsgProp>
         <Anim></Anim>

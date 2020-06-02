@@ -18,6 +18,7 @@ function Summary(props){
             <h2>hook的种类</h2>
             <p>1. useState  状态</p>
             <p>2. useEffect 生命周期</p>
+            <p>3. useContext 获取上下文的值</p>
 
             <p>react中推荐使用函数组件，有了hook函数组件理论上代替了类组件</p>
         </div>

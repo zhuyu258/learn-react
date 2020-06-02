@@ -10,6 +10,10 @@ class Asside extends Component {
         <li><a href="/learnUseEffect">useEffect</a></li>
         <li><a href="/myHooks">myHooks</a></li>
         <li><a href="/useReducer">myHooks</a></li>
+        <li><a href="/contextHook">contextHook</a></li>
+        <li><a href="/callBackHook">CallbackHook</a></li>
+        <li><a href="/memoHook">memoHook</a></li>
+        <li><a href="/useRef">useRef</a></li>
       </ul>
     );
   }
