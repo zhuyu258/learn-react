@@ -5,6 +5,8 @@ import React from 'react';
      用来改变数据
 
   1. setState放在元素的事件中是异步执行的否则就是同步的
+      异步： react事件回调，生命周期
+      同步： 原生事件，计时器，promise回调中都是同步
 
   2. 如果使用state中改变之后的状态则给setState传递第二个参数回调函数
 
@@ -52,7 +54,25 @@ export default class learnSetState extends React.Component{
      }
      render(){
         return (
-          <p >{this.state.num}<span onClick={this.change}>+</span></p>
+          <>
+            <div>
+              setState
+                 用来改变数据
+
+              1. setState放在元素的事件中是异步执行的否则就是同步的
+
+              2. 如果使用state中改变之后的状态则给setState传递第二个参数回调函数
+
+              3. 如果使用上一次的state中的状态，则给setState传递一个函数，此函数
+                 有两个参数分别为上一次的State状态和上一次的props
+
+              4. 如果连续执行多个同步的setState，那么每一次的执行都会执行render
+                 函数
+
+              5. 如果连续执行多个异步的setState,那么多次执行之后才会执行一次render
+            </div>
+            <p >{this.state.num}<span onClick={this.change}>+</span></p>
+          </>
         )
      }
 }

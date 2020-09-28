@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 class Search extends Component {
   constructor(props){
@@ -10,8 +11,8 @@ class Search extends Component {
     let newState = Object.assign({},state,props.defineSearch)
     this.state = newState
   }
-  
-  
+
+
 
   search = (e) => {
     this.props.search && this.props.search(this.state)
@@ -41,4 +42,10 @@ class Search extends Component {
   }
 }
 
-export default Search;
+function mapStateToProps (store) {
+  return {
+    defineSearch: store.student.searchCondition
+  }
+}
+
+export default connect(mapStateToProps,null)(Search);

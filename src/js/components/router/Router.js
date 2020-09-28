@@ -35,9 +35,12 @@
             该函数返回react元素，则一定会显示返回的元素，并且忽略
             component属性
 
+      4. render
+           匹配到路由之后显示的内容，和compnent差不多
+
   3. Switch组件
        写到Switch组件中的Route组件，当匹配到第一个Route后。会立即
-       停止继续往下匹配；
+       停止继续往下匹配；Switch只能匹配一个Route
 
        由于Switch组件会循环子元素，去寻找匹配的元素，所以在Switch
        中不能写Route之外的其他组件
@@ -60,6 +63,7 @@
          goBack() 回到上一个路径
 
      4.2 location对象
+          获取路由信息
           hash: ""  //接收通过hash传递的数据
           key: "urvqw6"
           pathname: "/B" //路径
@@ -82,13 +86,16 @@
            4. params,配置路由的时候设置在路径中
               eg: <Route path='/news/:year/:month' />
                 或<Route path='/news-:year-:month' /> 可以是任意连接符
-                或<Route path='/news/:year?/:month?' />参数是可选的
+                或<Route path='/news/:year?/:month?' />加?的参数是可选的，可传可不传
                 或<Route path='/news/:year(正则)/:month(正则)' />
                 或<Route path='/news/:year(正则)/:month(正则)/*' />
                 或<Route path="['/news','/news/:year','/news/:year']" /> 可以是数组，匹配数组中任一路径
-                
+
 
      4.5 后代组件中使用路由
+          问题：
+              非路由组件(也就是没有直接放在Route中，路由组件下面的子孙组件)，他们的props中没有路由信息，这些组件
+              想要获取路由信息，可以通过以下方法：
            1. 向后代组件中传递props
            2. 使用React-router提供的高阶组件withRouter,包装要使用的组件，
               该组件会返回一个新的组件，新组件将向提供的组件中注入路由信息

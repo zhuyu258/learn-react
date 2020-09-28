@@ -4,7 +4,8 @@ import {
   Route,
   Link,
   Switch,
-  Redirect
+  Redirect,
+  withRouter
 } from 'react-router-dom'
 import Layout from '../component/layout'
 import Header from '../component/header'
@@ -16,12 +17,13 @@ import CourseAdd from '../courseAdd'
 
 class Admin extends Component {
   render() {
+    const Assides = withRouter(Asside)
     return (
-        <Layout headerElem={<Header/>} assideElem={<Asside />}>
-          <Route path="/student" exact component={StuList} />
-          <Route path="/student/add" exact component={StuAdd} />
-          <Route path="/course" exact component={Course} />
-          <Route path="/course/add" exact component={CourseAdd} />
+        <Layout headerElem={<Header/>} assideElem={<Assides />}>
+          <Route path="/stu/SAdmin/students" exact component={StuList} />
+          <Route path="/stu/SAdmin/student/add" exact component={StuAdd} />
+          <Route path="/stu/SAdmin/course" exact component={Course} />
+          <Route path="/stu/SAdmin/course/add" exact component={CourseAdd} />
         </Layout>
     );
   }
